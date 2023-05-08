@@ -13,10 +13,12 @@ def rle_encode(text):
 
 def rle_decode(encoded_text):
     decoded_text = ""
-    i = 0
-    while i < len(encoded_text):
-        count = int(encoded_text[i])
-        char = encoded_text[i+1]
-        decoded_text += char * count
-        i += 2
+    num = ""
+    for i in encoded_text:
+        if i.isalpha():
+            decoded_text += i*int(num)
+            num = ""
+        else:
+            num += i
+
     return decoded_text
