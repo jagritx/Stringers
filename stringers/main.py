@@ -1,10 +1,10 @@
-from encrypt.vignere import vigenere_encrypt, vigenere_decrypt
-plaintext = "This is a test message."
-key = "SECRET"
-ciphertext = vigenere_encrypt(plaintext, key)
-print(ciphertext)  # Output: "Gksv kv c prng nqyqybu."
-decrypted_plaintext = vigenere_decrypt(ciphertext, key)
-print(decrypted_plaintext)
+from encrypt.rsa import RSA_GENERATE_KEYS, RSA_ENCODE, RSA_DECODE
+public_key_str, private_key_str = RSA_GENERATE_KEYS()
+plaintext = "Hello, world!"
+ciphertext = RSA_ENCODE(public_key_str, plaintext)
+print("Encrypted message:", ciphertext)
+decrypted_text = RSA_DECODE(private_key_str, ciphertext)
+print("Decrypted message:", decrypted_text)
 
 
 """ 
@@ -13,13 +13,14 @@ huffman (Class) done returns byte array
 rle done
 tunstall done (Class)
 arithmetic done (Counter)
-dictionary based done ~~
-shannonfano ~~
-CABAC ~~
-PPM ~~
-ANS ~~
-Delta ~~ 
-BWT ~~
+dictionary based done
+Advanced
+shannonfano done
+CABAC done
+PPM done
+ANS done
+Delta done
+BWT done
 
 """
 
@@ -36,6 +37,7 @@ Railfence Done
 Vignere Done
 Salsa20 Done
 CHA CHA 20 done
-Twofish ~~
-ElGamal ~~
+Easy
+Twofish done
+ElGamal done
 '''

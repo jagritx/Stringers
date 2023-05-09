@@ -12,6 +12,3 @@ Shannon Fano Encoding
 Asymmetric Numeral Systems (ANS)
 Context - adaptive binary arithmetic coding (CABAC)'''
           )
-
-
-print_encoding_methods()
